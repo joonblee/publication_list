@@ -5,9 +5,10 @@
 %
 % Editorial basis:
 % - Personal contributions: the author's checked record and clarifications,
-%   supplied on 13 October 2026 (Korea time).
+%   supplied on 13 October 2026 and revised on 14 October 2026 (Korea time).
 % - Bibliographic data: publisher/arXiv records and the final CV.
-% - Internal CMS status and JHEP acceptance: the author's current CV.
+% - Internal CMS status and JHEP acceptance: the author's current record.
+%   NPS review dates are targets reported on 14 October, not completed stages.
 % - Herwig 7.4 integration is a contribution to the release code; the release
 %   note remains in preparation. Public release availability is not asserted.
 % - The resonator article is analytical mechanics, not an accomplished BSM
@@ -52,20 +53,21 @@
 \hypersetup{
   pdftitle={Joon-Bin Lee -- Selected Publications and Personal Contributions},
   pdfauthor={Joon-Bin Lee},
-  pdfsubject={Annotated publication list; status as of 13 October 2026},
+  pdfsubject={Annotated publication list; status as of 14 October 2026},
   pdfkeywords={CMS, Herwig, BSM searches, event generators, collider phenomenology}
 }
 
 \titleformat{\section}{\bfseries\color{cvblue}\fontsize{11.4pt}{12.5pt}\selectfont}{}{0pt}{}[\vspace{-2pt}\titlerule]
-\titlespacing*{\section}{0pt}{10pt}{6pt}
+\titlespacing*{\section}{0pt}{8pt}{6pt}
 
 % Reusable entry format: stable label, exact title, metadata, contribution.
 % Each entry stays on one page; no special font files or external assets.
 \newenvironment{pubentry}[2]{%
-  \par\addvspace{12pt}%
+  \par\addvspace{8pt}%
   \begin{minipage}{\linewidth}%
   \justifying
   \setlength{\parindent}{0pt}
+  \hypertarget{pub:#1}{}%
   {\bfseries\color{cvblue}[#1]}\hspace{0.5em}{\bfseries #2}\par
   \vspace{2pt}%
 }{%
@@ -79,18 +81,19 @@
 % Highlight only one or two short phrases per entry. Black bold remains
 % readable in print; titles, author names and status labels keep their style.
 \newcommand{\keycontribution}[1]{\ifhighlightcontributions\textbf{#1}\else#1\fi}
+\newcommand{\pubref}[1]{\hyperlink{pub:#1}{[#1]}}
 \newcommand{\arxivlink}[1]{\href{https://arxiv.org/abs/#1}{arXiv:#1}}
 \newcommand{\doilink}[1]{\href{https://doi.org/#1}{doi:#1}}
 \newcommand{\mgfive}{MadGraph5\_aMC@NLO}
 \newcommand{\genstatus}{In preparation; CMS pre-approved; not yet public.}
-\newcommand{\npsstatus}{CMS internal review; in preparation for pre-approval.}
+\newcommand{\npsstatus}{CMS internal review. Final report planned for 20 October 2026; pre-approval targeted for early November.}
 \newcommand{\releasestatus}{Release note in preparation.}
 
 \begin{document}
 \begin{center}
   {\fontsize{17pt}{19pt}\selectfont\bfseries JOON-BIN LEE}\\[2pt]
   {\fontsize{11.5pt}{13pt}\selectfont\bfseries PUBLICATION LIST}\\[2pt]
-  {\fontsize{10pt}{11.5pt}\selectfont Selected works and personal contributions\quad|\quad13 October 2026}\\[3pt]
+  {\fontsize{10pt}{11.5pt}\selectfont Selected works and personal contributions\quad|\quad14 October 2026}\\[3pt]
   {\fontsize{9.5pt}{11pt}\selectfont Seoul National University\quad|\quad
   \href{mailto:joon.bin.lee@cern.ch}{joon.bin.lee@cern.ch}\quad|\quad
   \href{https://orcid.org/0000-0001-6753-3731}{ORCID: 0000-0001-6753-3731}}
@@ -98,41 +101,38 @@
 \vspace{-3pt}
 
 {\fontsize{10.5pt}{12.5pt}\selectfont
-My research \keycontribution{connects event-generator development, collider phenomenology and CMS data analysis to search for unconventional signatures of new physics}. The dimuon-in-jet programme links BSM shower modelling and phenominological signature characterisation to an experimental search, supported by broader generator-modelling work. Complementary shell-resonator studies explore mechanical foundations for possible non-collider probes for more extreme phase space study that cannot be studied in the current detector concepts.\par}
+My research \keycontribution{connects event-generator development, collider phenomenology and CMS data analysis to search for unconventional signatures of new physics}. The dimuon-in-jet programme links BSM shower modelling and signature characterisation to experiment, alongside broader CMS simulation work. My shell-resonator work develops mechanical foundations for possible BSM probes beyond conventional collider reach.\par}
 \vspace{4pt}
 {\fontsize{9pt}{10.5pt}\selectfont\color{cvgrey}
-Selected works with leading contributions; \corr\,corresponding author.\par}
+Selected works in which I made leading contributions; \corr\,corresponding author.\par}
 
-\section*{PARTICLE PHYSICS --- PUBLISHED}
-% I erased "or accepted". [P1] is just decided to be pub. I'll add the exact ref right after it's actually released on JHEP.
+\section*{PARTICLE PHYSICS --- PUBLICATIONS}
+% P1 is accepted and at the proof stage. Add the journal reference when issued;
+% the broad section heading avoids labelling it as already published.
 
 % P1: The author proposed and led the study, including its scientific and
 % manuscript strategy. Leadership does not imply sole execution by one author.
 \begin{pubentry}{P1}{Searching for New Physics Inside Jets with the Herwig 7 Generalised Parton Shower}
 \pubauthors{Taehee Kim, \pubme\corr, M. R. Masouminia, Michael H. Seymour and Un-ki Yang.}
 \pubdetails{Accepted for publication in \textit{JHEP} (2026). \arxivlink{2604.00617}.}
-\contribution{I \keycontribution{conceived and led the whole study} from the research proposal through manuscript preparation and referee responses. I designed the benchmarks and analysis strategy, performed theoretical and numerical studies. Using the BSM shower framework I developed [P2], I \keycontribution{characterised non-isolated dimuon signatures inside jets}, identified discriminating observables and evaluated prospective sensitivity that provides a solid foundation for the CMS analysis [R1]. This work connects generator development to experimentally testable search strategies for the CMS dimuon-in-jet programme.}
+\contribution{I \keycontribution{conceived and led the study from proposal through peer review}. I designed the benchmarks and analysis strategy, performed theoretical and numerical studies, and led manuscript preparation and referee responses. Using the BSM shower framework I developed~\pubref{P2}, I \keycontribution{characterised non-isolated dimuon signatures inside jets}, identified discriminating observables and evaluated prospective sensitivity. The study establishes the phenomenological basis for the CMS dimuon-in-jet search\ifincludeinprogress~\pubref{R1}\fi.}
 \end{pubentry}
-% Reviewers should know I'm the sample production expert so erase the sample production description with cowerker's help statement.
-% Add reference number for connectivity
+% Keep the emphasis on scientific and manuscript leadership. Routine sample
+% production and collaborators' assistance need not be itemised here.
 
 % P2: The original CMS search motivation was proposed by Un-ki Yang;
 % the generalised BSM-shower project and MCnet proposal were J.-B. Lee's.
 \begin{pubentry}{P2}{Generalized angular-order parton showers in Herwig 7}
 \pubauthors{\pubme\corr, M. R. Masouminia, Michael H. Seymour and Un-ki Yang.}
 \pubdetails{\textit{JHEP} \textbf{08} (2024) 064. \arxivlink{2312.13125}; \doilink{10.1007/JHEP08(2024)064}.}
-\contribution{When my supervisor asked me to work for the dimuon inside b-jets study [R1], I was agonizing what can be its signal candidate and how to simulate it.
-I thus proposed the BSM-shower project, and MCnet and HERWIG7 Collaboration accepts it.
-I thus got a fund from MCnet studentship.I \keycontribution{derived BSM splitting functions, implemented the shower algorithms} and UFO-based automatic model support, and led physics validation and numerical studies. I prepared the first manuscript and subsequent revisions under Michael H. Seymour's scientific supervision. The framework supplies the radiation-based signal modelling needed for the phenomenological and experimental programme.
-The final framework is usable on my personal git: https://github.com/joonblee/herwig74alpha as a preliminary version of HERWIG 7.4, and the whole HW7.4 will be released soon [R3].
-It extends our knowledge of parton shower and is expected to be used in future colliders with proper merging/matching schemes.}
+\contribution{Prompted by Un-ki Yang's proposal for a dimuon-in-$b$-jet search\ifincludeinprogress~\pubref{R1}\fi, I identified BSM shower radiation as a possible signal-production mechanism, \keycontribution{proposed the generalised BSM-shower project} and secured an MCnet studentship. Under Michael H. Seymour's supervision, I \keycontribution{derived the splitting functions and implemented the shower algorithms}, including automatic UFO-based model support, and led validation and manuscript preparation. The framework enables the signal modelling used in~\pubref{P1} and the CMS search. A \href{https://github.com/joonblee/herwig74alpha}{public development version} is available ahead of the official Herwig~7.4 release\ifincludeinprogress~\pubref{R3}\fi, providing a basis for future-collider studies and further work on matching and merging.}
 \end{pubentry}
 
 \begin{pubentry}{C1}{Implementation of the CMS-HIG-18-011 analysis in the MadAnalysis 5 framework (exotic Higgs decays via two pseudoscalars with two muons and two $b$-jets; 35.9~fb$^{-1}$)}
 \pubauthors{\pubme\corr\ and Jehyun Lee.}
 \pubdetails{\textit{Mod. Phys. Lett. A} \textbf{36} (2021) 2141003 (peer-reviewed conference proceeding).\\
 \doilink{10.1142/S0217732321410030}.}
-\contribution{I \keycontribution{reimplemented the published CMS analysis in MadAnalysis~5}. The original results are re-produced from the sample productions and initial manuscript is prepared with guidance from the MadAnalysis~5 team. This work established my practical understanding of \keycontribution{CMS muons, $b$-jet identification, reconstruction, event selection, and statistical effects}, providing a foundation for understandings of nominal muons and b-jets in CMS and developing the subsequent non-isolated dimuon search.}
+\contribution{I \keycontribution{reimplemented the published CMS analysis in MadAnalysis~5}, generated event samples and validated the implementation against the published results. I prepared the initial manuscript with guidance from the MadAnalysis~5 team. This work established my understanding of \keycontribution{CMS muon and $b$-jet reconstruction}, event selection and statistical interpretation, providing a foundation for the subsequent non-isolated dimuon search\ifincludeinprogress~\pubref{R1}\fi.}
 \end{pubentry}
 
 \section*{ENGINEERING --- PUBLISHED}
@@ -140,9 +140,10 @@ It extends our knowledge of parton shower and is expected to be used in future c
 \begin{pubentry}{P3}{Analytical modelling of frequency splitting and modal degeneracy restoration in imperfect wine-glass shell resonators}
 \pubauthors{\pubme.}
 \pubdetails{\textit{Int. J. Eng. Sci.} \textbf{227} (2026) 104593. \doilink{10.1016/j.ijengsci.2026.104593}.}
-\contribution{When I was in department of aerospace engineering, I majored structure and vibration. Motivated by my interest in unconventional probes beyond the LHC, I was agonized how to apply this knowledge in particle physics. The answer is that the HRG is a vibration detector with high Q factor. The ongoing limitation is a high price to handle the frequency splitting problem. I thus formulated the shell-vibration model and \keycontribution{an imperfection-balancing method to restore modal degeneracy without additional accessory}, which mainly makes the whole device expensive. I validated the analytical results with numerical calculations and COMSOL simulations. Even though this study still needs a lot of more developments to be actually used in particle physics, I am sure this technique will be used for BSM detection.}
+\contribution{Motivated by possible new-physics probes beyond the LHC, I applied my background in aerospace structures and vibration to high-quality-factor shell resonators. Structural imperfections split otherwise equal frequencies within pairs of vibration modes, limiting sensor performance. As sole author, I derived the shell-vibration model and \keycontribution{a geometrical balancing method that restores equal frequencies within mode pairs} (modal degeneracy), and validated the results with numerical calculations and COMSOL simulations. By balancing added and removed mass, the method offers a route to reduce reliance on auxiliary tuning hardware. My longer-term goal is to develop this approach for BSM sensing.}
 \end{pubentry}
-% Is it possible that normal particle physicists can understand modal degeneracy, or the corresponding descriptions? Please make sure particle physicsits can understand it without further searches or explanations. 
+% Explain the vibration terminology for particle physicists. Hardware/cost
+% implications and BSM sensing are prospects, not demonstrated detector results.
 
 \ifincludeinprogress
 \newpage
@@ -156,16 +157,16 @@ The following entries are not published papers. Internal CMS analyses and manusc
 \begin{pubentry}{R1}{Search for anomalous dimuon resonances within b jets in proton-proton collisions at $\sqrt{s}=13$ and 13.6~TeV}
 \pubauthors{CMS Collaboration --- internal analysis; analysis contact: \pubme.}
 \pubdetails{\textbf{CMS-NPS-26-009}. \npsstatus}
-\contribution{I \keycontribution{lead the experimental search} and serve as analysis contact. I actually performed all analysis steps. I wrote the principal Analysis Note content and coordinate the ongoing CMS internal-review responses. This analysis brings together my BSM-shower development [P1] and phenomenology [P2] to investigate \keycontribution{non-isolated dimuon resonances} in CMS collision data. The final report is planned on the 20th day of Oct., and the pre-approval talk is expected to be followed after 2 weeks.}
+\contribution{I \keycontribution{lead the search and perform the full analysis}, from analysis design and signal modelling to background estimation, systematic uncertainties and statistical inference. As analysis contact, I prepared the Analysis Note and coordinate the CMS internal review. The search brings together my BSM-shower development~\pubref{P2} and phenomenology~\pubref{P1} to investigate \keycontribution{non-isolated dimuon resonances} in CMS collision data.}
 \end{pubentry}
-% I designed the signal and control regions, optimised muon and $b$-jet selections, and developed the analysis code and signal-simulation workflow. I performed background estimation, systematic-uncertainty evaluation and statistical inference, including Combine datacards and limit calculations
+% Condense the full analysis workflow rather than listing every technical task.
 
 % R2: Preserve the working title from the CV. The production software name is
 % typeset in its standard form in the contribution paragraph below.
 \begin{pubentry}{R2}{Modelling physics processes with MadGraph5\_aMCatNLO and parton shower Monte Carlos in the CMS experiment}
 \pubauthors{CMS Collaboration --- internal manuscript; analysis contact: \pubme.}
 \pubdetails{\textbf{CMS-GEN-25-002}. \genstatus}
-\contribution{I \keycontribution{proposed the paper's scope} to document CMS event-modelling choices as a reference for current and future collider studies. I \keycontribution{designed and coordinated new-version tests} of \mgfive, including CMSSW compatibility, physics predictions, matching and merging, and investigation of discrepancies with generator developers. I developed simulation and comparison workflows, produced results, and wrote the initial manuscript and internal-review responses, leading CMS generator validation team and CMS-MG5 team. The work applies my generator expertise to collaboration-wide simulation practice, including modelling relevant to the dimuon-in-jet analysis.}
+\contribution{I \keycontribution{proposed the paper's scope} to document CMS event-modelling choices as a reference for current and future collider studies. I \keycontribution{lead the CMS generator-validation and MG5 teams}, designing and coordinating new-version tests of \mgfive, including CMSSW compatibility, physics predictions, matching and merging, and investigation of discrepancies with generator developers. I developed simulation and comparison workflows, produced results, and wrote the initial manuscript and internal-review responses. The work applies my generator expertise to collaboration-wide simulation, including the modelling used in the dimuon-in-jet search~\pubref{R1}.}
 \end{pubentry}
 
 % R3: Integration/dissemination of the existing BSM-shower framework is the
@@ -173,7 +174,7 @@ The following entries are not published papers. Internal CMS analyses and manusc
 \begin{pubentry}{R3}{Herwig 7.4 Release Note}
 \pubauthors{Herwig 7 Collaboration --- BSM-shower contributor: \pubme.}
 \pubdetails{\releasestatus}
-\contribution{I \keycontribution{integrated the generalised BSM parton-shower framework} [P2] into the code prepared for Herwig~7.4, bringing the original research implementation into the \keycontribution{official release workflow}. I produced physics-validation comparisons and release benchmarks, wrote user documentation and examples, and contributed the BSM-related release-note material. Based on my BSM PS programme, HW7 team also implemented the hidden valley model in HW7.4. This work prepares the framework for wider use in phenomenological studies and experimental signal simulation, extending its utility beyond the original BSM-shower programme.}
+\contribution{I \keycontribution{integrated the generalised BSM parton-shower framework}~\pubref{P2} into the code prepared for Herwig~7.4. I produced validation studies and release benchmarks, wrote user documentation and examples, and contributed the BSM-related release-note material. The framework has also \keycontribution{supported wider developments by the Herwig team}, including its \href{https://doi.org/10.1140/epjc/s10052-024-13587-8}{Hidden Valley implementation}. The official release will make these tools available for broader use in phenomenological studies and experimental signal simulation.}
 \end{pubentry}
 \fi
 
