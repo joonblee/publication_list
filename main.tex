@@ -86,7 +86,7 @@
 \newcommand{\doilink}[1]{\href{https://doi.org/#1}{doi:#1}}
 \newcommand{\mgfive}{MadGraph5\_aMC@NLO}
 \newcommand{\genstatus}{In preparation; CMS pre-approved; not yet public.}
-\newcommand{\npsstatus}{CMS internal review. Final report planned for 20 October 2026; pre-approval targeted for early November.}
+\newcommand{\npsstatus}{\textbf{Status:} CMS internal review, preparing for pre-approval.\\Final analysis report planned for 20 October 2026; pre-approval talk targeted for early November.}
 \newcommand{\releasestatus}{Release note in preparation.}
 
 \begin{document}
@@ -132,7 +132,7 @@ Selected works in which I made leading contributions; \corr\,corresponding autho
 \pubauthors{\pubme\corr\ and Jehyun Lee.}
 \pubdetails{\textit{Mod. Phys. Lett. A} \textbf{36} (2021) 2141003 (peer-reviewed conference proceeding).\\
 \doilink{10.1142/S0217732321410030}.}
-\contribution{I reimplemented the published CMS analysis, CMS-HIG-18-001, which studied BSM higgs decaying into two muons and two $b$-jets, in MadAnalysis~5, generated event samples and validated the implementation against the published results. I prepared the initial manuscript with guidance from the MadAnalysis~5 team. This work established my understanding of \keycontribution{CMS muon and $b$-jet reconstruction}, event selection and statistical interpretation, providing a foundation for the subsequent non-isolated dimuon search in b-jets\ifincludeinprogress~\pubref{R1}\fi.}
+\contribution{I reimplemented CMS-HIG-18-011, a search for exotic Higgs decays $h\to a_1a_1\to\mu^+\mu^-b\bar{b}$, in MadAnalysis~5 and validated it against the published results using generated event samples. I prepared the initial manuscript with guidance from the MadAnalysis~5 team. The study developed my understanding of \keycontribution{CMS muon and $b$-jet reconstruction}, event selection and statistical interpretation, laying the groundwork for the non-isolated dimuon-in-$b$-jet search\ifincludeinprogress~\pubref{R1}\fi.}
 \end{pubentry}
 
 \section*{ENGINEERING --- PUBLISHED}
@@ -140,14 +140,8 @@ Selected works in which I made leading contributions; \corr\,corresponding autho
 \begin{pubentry}{P3}{Analytical modelling of frequency splitting and modal degeneracy restoration in imperfect wine-glass shell resonators}
 \pubauthors{\pubme.}
 \pubdetails{\textit{Int. J. Eng. Sci.} \textbf{227} (2026) 104593. \doilink{10.1016/j.ijengsci.2026.104593}.}
-\contribution{Motivated by possible new-physics probes beyond the LHC, I applied my background in aerospace structures and vibration to high-Q factor shell resonators.
-% Explain why the current HRGs cannot be used for HEP ex
-% e.g. expensive due to the additional equipments to handle the frequency splitting phenomena
-% Erase this comment after updating the context.
-Structural imperfections split otherwise equal frequencies within pairs of vibration modes, limiting sensor performance. As sole author, I derived the shell-vibration model and \keycontribution{a geometrical balancing method that restores equal frequencies within mode pairs} (modal degeneracy), and validated the results with numerical calculations and COMSOL simulations. By balancing added and removed mass, the method offers a route to reduce reliance on auxiliary tuning hardware. My longer-term goal is to develop this approach for BSM sensing.}
+\contribution{I applied my aerospace structures and vibration background to high-$Q$ shell resonators, motivated by possible new-physics probes beyond the LHC. Imperfections split otherwise equal vibration-mode frequencies; compensating this splitting can require costly tuning equipment or additional control hardware. As sole author, I derived the shell-vibration model and \keycontribution{a geometrical method to restore equal frequencies within mode pairs} (modal degeneracy), validating the results with numerical calculations and COMSOL simulations. Balancing added and removed mass offers a route to reduce these cost and hardware barriers to future particle-physics applications. My longer-term goal is BSM sensing.}
 \end{pubentry}
-% Explain the vibration terminology for particle physicists. Hardware/cost
-% implications and BSM sensing are prospects, not demonstrated detector results.
 
 \ifincludeinprogress
 \newpage
@@ -161,11 +155,7 @@ The following entries are not published papers. Internal CMS analyses and manusc
 \begin{pubentry}{R1}{Search for anomalous dimuon resonances within b jets in proton-proton collisions at $\sqrt{s}=13$ and 13.6~TeV}
 \pubauthors{CMS Collaboration --- internal analysis; analysis contact: \pubme.}
 \pubdetails{\textbf{CMS-NPS-26-009}. \npsstatus}
-\contribution{I \keycontribution{lead the search and perform the full analysis}, from analysis design and signal modelling to background estimation, systematic uncertainties and statistical inference. As analysis contact, I prepared the Analysis Note and coordinate the CMS internal review. The search brings together my BSM-shower development~\pubref{P2} and phenomenology~\pubref{P1} to investigate \keycontribution{non-isolated dimuon resonances} in CMS collision data.
-% Is it unecessary to say current status? e.g. 20.Oct -> final report; after 2 weeks -> pre-app talk? It seems that only with this information, readers do not understand whether this analysis is well-going.
-% Mention that this analysis targets experimentally unexplored phase space in CMS, to clarify the novelty.
-% Erase the comments if it's handled appropriately.
-}
+\contribution{I \keycontribution{lead the search and perform the full analysis}, targeting a previously unexplored CMS phase-space region with \keycontribution{non-isolated dimuon resonances inside $b$ jets}. My work spans analysis design and signal modelling, background estimation, systematic uncertainties and statistical inference. As analysis contact, I prepared the Analysis Note and coordinate the CMS internal review. The search brings together my BSM-shower development~\pubref{P2} and phenomenology~\pubref{P1} in an analysis of CMS collision data.}
 \end{pubentry}
 % Condense the full analysis workflow rather than listing every technical task.
 
